@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="login-card">
+    <h2>Login</h2>
+    <div class="input-div">
+      <label>Usuário: </label>
+      <input class="input-text" [(ngModel)]="username" placeholder="Username" />
+    </div>
+    <div class="input-div">
+      <label>Senha: </label>
+      <input class="input-text" [(ngModel)]="password" type="password" placeholder="Password" />
+      <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>
+    <button class="login-button" (click)="login()">Entrar</button>
+    <p>Ainda não tem uma conta? <a routerLink="/register">Cadastre-se</a></p>
+  </div>
+</div>

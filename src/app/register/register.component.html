@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="register-card">
+    <h2>Cadastro</h2>
+    <div class="input-div">
+      <label>Usuário:</label>
+      <input class="input-text" [(ngModel)]="username" placeholder="Username" />
+    </div>
+    <div class="input-div">
+      <label>Senha:</label>
+      <input
+        class="input-text"
+        [(ngModel)]="password"
+        type="password"
+        placeholder="Password"
+      />
+    </div>
+    <div class="input-div">
+      <label>Confirmar Senha:</label>
+      <input
+        class="input-text"
+        [(ngModel)]="confirmPassword"
+        type="password"
+        placeholder="Confirm Password"
+      />
+      <div class="error" *ngIf="errorMessage">{{ errorMessage }}</div>
+    </div>
+    <button class="register-button" (click)="register()">Cadastrar</button>
+    <p>Já tem uma conta? <a routerLink="/login">Entrar</a></p>
+  </div>
+</div>
