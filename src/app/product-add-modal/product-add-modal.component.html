@@ -1,6 +1,6 @@
 <div class="container">
   <h2 class="modal-title" mat-dialog-title>Adicionar Produto</h2>
-  <form class="form" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
     <mat-dialog-content>
       <mat-form-field class="field">
         <input matInput placeholder="Nome" formControlName="name" />

@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-title {
+  text-align: center;
+  font-size: 1.5em;
+  margin:0;
+  margin-top: 20px;
+}
+
+.field {
+  width: 100%;
+}
+
+.div-btn {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.cancel-btn {
+  width: 30%;
+  height: 40px;
+  font-size: medium;
+  font-weight: bold;
+  color: #fff;
+  background-color: #424242;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+}
+.cancel-btn:hover {
+  border: 1px solid #c2185b;
+}
+
+.save-btn {
+  width: 30%;
+  height: 40px;
+  font-size: medium;
+  font-weight: bold;
+  color: #fff;
+  background-color: #c2185b;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
