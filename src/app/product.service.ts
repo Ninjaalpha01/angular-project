@@ -8,13 +8,10 @@ export interface Product {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ProductService {
-  private products: Product[] = [
-    { id: 1, name: 'Produto A', price: 50 },
-    { id: 2, name: 'Produto B', price: 75 }
-  ];
+  private products: Product[] = [];
 
   private productsSubject = new BehaviorSubject<Product[]>(this.products);
 
@@ -31,7 +28,7 @@ export class ProductService {
   }
 
   updateProduct(product: Product): void {
-    const index = this.products.findIndex(p => p.id === product.id);
+    const index = this.products.findIndex((p) => p.id === product.id);
     if (index !== -1) {
       this.products[index] = product;
       this.productsSubject.next(this.products);
@@ -39,11 +36,13 @@ export class ProductService {
   }
 
   deleteProduct(productId: number): void {
-    this.products = this.products.filter(p => p.id !== productId);
+    this.products = this.products.filter((p) => p.id !== productId);
     this.productsSubject.next(this.products);
   }
 
   private generateProductId(): number {
-    return this.products.length > 0 ? Math.max(...this.products.map(p => p.id)) + 1 : 1;
+    return this.products.length > 0
+      ? Math.max(...this.products.map((p) => p.id)) + 1
+      : 1;
   }
 }

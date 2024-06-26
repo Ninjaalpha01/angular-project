@@ -42,6 +42,7 @@
   justify-content: center;
   align-items: center;
   font-size: medium;
+  margin-bottom: 20px;
 }
 
 .login-button:hover {
