@@ -1,0 +1,26 @@
+<div class="list-container">
+  <button
+    class="add-btn"
+    mat-raised-button
+    color="primary"
+    (click)="openAddModal()"
+  >
+    Adicionar Produto
+  </button>
+  <div class="card-container">
+    <div *ngFor="let product of products" class="card">
+      <div class="card-content">
+        <h3>{{ product.name }}</h3>
+        <p>Preço: ${{ product.price }}</p>
+        <div class="card-actions">
+          <button (click)="openEditModal(product)" class="edit-btn">
+            Editar
+          </button>
+          <button (click)="deleteProduct(product.id)" class="delete-btn">
+            Excluir
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

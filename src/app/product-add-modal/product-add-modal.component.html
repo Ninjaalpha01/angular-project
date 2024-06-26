@@ -1,0 +1,31 @@
+<div class="container">
+  <h2 class="modal-title" mat-dialog-title>Adicionar Produto</h2>
+  <form class="form" [formGroup]="productForm" (ngSubmit)="onSubmit()">
+    <mat-dialog-content>
+      <mat-form-field class="field">
+        <input matInput placeholder="Nome" formControlName="name" />
+      </mat-form-field>
+      <mat-form-field class="field">
+        <input
+          matInput
+          type="number"
+          placeholder="Preço"
+          formControlName="price"
+        />
+      </mat-form-field>
+    </mat-dialog-content>
+    <mat-dialog-actions class="div-btn">
+      <button class="cancel-btn" mat-button type="button" (click)="onClose()">
+        Cancelar
+      </button>
+      <button
+        class="save-btn"
+        mat-button
+        type="submit"
+        [disabled]="!productForm.valid"
+      >
+        Salvar
+      </button>
+    </mat-dialog-actions>
+  </form>
+</div>

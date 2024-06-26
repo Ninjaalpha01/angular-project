@@ -1,0 +1,31 @@
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #58c9ad;
+  padding: 1em;
+}
+
+.top-bar > h1 {
+  font-size: 2em;
+  font-weight: 500;
+  margin: 0;
+  color: white;
+}
+
+.top-bar > button {
+  background-color: white;
+  color: #58c9ad;
+  border: none;
+  width: 100px;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.top-bar > button:hover {
+  background-color: #45a88c;
+  color: white;
+  border: 1px solid white;
+}

@@ -1,10 +1,8 @@
-<div class="top-bar">
-  <h1>Bem vindo!</h1>
-  <button (click)="logout()">Sair</button>
-</div>
-<main>
+<!-- home.component.html -->
+<app-header></app-header>
+<main class="home-container">
+  <h1>Controle de Produtos</h1>
   <div>
-    <h3>UserName</h3>
-    <p>UserEmail</p>
+    <app-product-list></app-product-list>
   </div>
 </main>
